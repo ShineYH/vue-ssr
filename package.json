@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client:dev": "webpack-dev-server",
+    "client:dev": "webpack-dev-server --config ./config/webpack.client.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
