@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import App from './app.vue';
 import crteateRouter from './router';
+import createVuex from './store';
 
 // let vm = new Vue({
 //   el: '#app',
@@ -13,10 +14,12 @@ import crteateRouter from './router';
 
 export default () => {
   let router = crteateRouter();
+  let store = createVuex();
   let app = new Vue({
     // el: '#app',   // 服务端不需要挂载
     router,
+    store,
     render: h => h(App)
   });
-  return { app, router };
+  return { app, router, store };
 }
