@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import App from './app.vue';
+import crteateRouter from './router';
 
 // let vm = new Vue({
 //   el: '#app',
@@ -11,9 +12,11 @@ import App from './app.vue';
 // 使用一个函数，每次调用都返回一个新的实例
 
 export default () => {
+  let router = crteateRouter();
   let app = new Vue({
     // el: '#app',   // 服务端不需要挂载
+    router,
     render: h => h(App)
   });
-  return { app };
+  return { app, router };
 }
